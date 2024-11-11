@@ -1,0 +1,12 @@
+<div class="summary-card">
+    <div class="value-section">
+      <h2>{{ value }}</h2>
+      <span class="unit">{{ unit }}</span>
+    </div>
+    <div class="title">{{ title }}</div>
+    <div class="change-section" [ngClass]="{'positive': isPositive, 'negative': !isPositive}">
+      <mat-icon>{{ isPositive ? 'arrow_upward' : 'arrow_downward' }}</mat-icon>
+      <span>{{ change }} {{ changeUnit }}</span>
+    </div>
+  </div>
+  

@@ -1,0 +1,55 @@
+.summary-card {
+    background-color:white;
+    border-radius: 12px;
+    padding: 16px;
+    width: 150px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    height: 100px; /* Set a fixed height for the cards */
+  }
+  
+  .value-section {
+    font-size: 1.5rem;
+    color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  
+  .value-section h2 {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .unit {
+    font-size: 0.75rem;
+    margin-left: 4px;
+  }
+  
+  .title {
+    color: #555;
+    margin-top: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .change-section {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .change-section.positive {
+    color: #1ca870;
+  }
+  
+  .change-section.negative {
+    color: #d9534f;
+  }
+  
+  .change-section mat-icon {
+    font-size: 1rem;
+    margin-right: 4px;
+  }
+  
