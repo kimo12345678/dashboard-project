@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    width: 100%;
+    background-color: #faf5f2;
+    ::ng-deep .mat-button-toggle-checked {
+        background-color: #F27D59 !important;
+        color: white; /* Adjust text color if needed */
+      }
+  }
+  
+  .left-container {
+    width: 70%; /* Takes 2/3 of the screen width */
+    padding-right: 2%; /* Optional padding for spacing */
+  }
+  
+  .right-container {
+    width: 25%; /* Takes 25% of the screen width */
+    padding-left: 2%; /* Optional padding for spacing */
+  }
+  
+
+  
+  .list {
+    display: flex;
+    justify-content: center; /* Centers the list horizontally */
+    width: 100%; /* Ensures the container takes up the full width of its parent */
+  }
+  
+  app-station-list {
+    width: 80%; /* Ensures the list takes up 80% of the container's width */
+    /* Optionally, you can add padding or margin to adjust the positioning */
+  }
+  .summary-cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if there's not enough space */
+    justify-content: space-between; /* Distribute cards with equal space */
+    gap: 16px; /* Adds space between cards */
+    margin: 30px;
+  }
+  
+  .summary-cards-container app-summary-card {
+    flex: 1 1 22%; /* Each card takes up 22% of the container width (you can adjust this) */
+    min-width: 220px; /* Minimum width for each card */
+
+    display: flex;
+    flex-direction: column; /* Ensure content is laid out vertically within the card */
+    justify-content: space-between; /* Distribute the content vertically */
+  }
+  .toggle-container {
+    display: flex;
+    justify-content: flex-end; /* Align the toggle group to the right */
+    width: 90%; /* Make sure the container spans the full width */
+  }
+  

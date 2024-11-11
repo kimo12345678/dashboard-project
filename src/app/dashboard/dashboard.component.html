@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="left-container">
+        <div class="summary-cards">
+          <div class="summary-cards-container">
+            <app-summary-card
+              value="71,028"
+              unit="EGP"
+              title="Total Value"
+              change="2%"
+              changeUnit=""
+              [isPositive]="false">
+            </app-summary-card>
+      
+            <app-summary-card
+              value="20,000"
+              unit="m³"
+              title="Total Sales"
+              change="50"
+              changeUnit="m³"
+              [isPositive]="true">
+            </app-summary-card>
+      
+            <app-summary-card
+              value="20,000"
+              unit="m³"
+              title="Avg Sales"
+              change="50"
+              changeUnit="m³"
+              [isPositive]="false">
+            </app-summary-card>
+      
+            <app-summary-card
+              value="1567"
+              unit=""
+              title="Total Transaction Count"
+              change="20"
+              changeUnit=""
+              [isPositive]="true">
+            </app-summary-card>
+          </div>
+        </div>
+      
+        <!-- Toggle for List or Graph -->
+        <div class="toggle-container">
+            <mat-button-toggle-group
+              name="viewType"
+              aria-label="View Type"
+              [(ngModel)]="selectedViewType"
+              style="border-radius: 43px; direction: rtl;"
+            >
+              <mat-button-toggle style="width: 150px;" value="list" [ngClass]="{ 'active-button': selectedViewType === 'list' }">
+                <mat-icon>view_list</mat-icon> List
+              </mat-button-toggle>
+          
+              <mat-button-toggle style="width: 150px;" value="graph" [ngClass]="{ 'active-button': selectedViewType === 'graph' }">
+                <mat-icon>assessment</mat-icon> Graph
+              </mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+          
+      
+        <!-- Display content based on selected view type -->
+        <div *ngIf="selectedViewType === 'list'" class="list">
+          <app-station-list [stations]="stations"></app-station-list>
+        </div>
+      
+        <div *ngIf="selectedViewType === 'graph'" class="graph">
+          <app-graph [data]="graphData"></app-graph> 
+        </div>
+      </div>
+      
+  
+    <div class="right-container">
+      
+    </div>
+  </div>
+  
