@@ -1,0 +1,47 @@
+<div style="background-color: white; display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div class="sidebar">
+      <!-- Top icon -->
+      <div class="sidebar-item">
+        <button mat-icon-button [ngClass]="{'active': activeIcon === 'water_drop'}" (click)="setActive('water_drop')">
+          <mat-icon inline="true" style="color: white">water_drop</mat-icon>
+        </button>
+      </div>
+      
+      <!-- Grouped middle icons -->
+      <div class="sidebar-middle">
+        <div class="sidebar-item">
+          <button mat-icon-button [ngClass]="{'active': activeIcon === 'speed'}" (click)="setActive('speed')">
+            <mat-icon inline="true" style="color: white">speed</mat-icon>
+          </button>
+        </div>
+        <div class="sidebar-item">
+          <button mat-icon-button [ngClass]="{'active': activeIcon === 'dashboard'}" (click)="setActive('dashboard')">
+            <mat-icon inline="true" style="color: white">dashboard</mat-icon>
+          </button>
+        </div>
+        <div class="sidebar-item">
+          <button mat-icon-button [ngClass]="{'active': activeIcon === 'layers'}" (click)="setActive('layers')">
+            <mat-icon inline="true" style="color: white">layers</mat-icon>
+          </button>
+        </div>
+        <div class="sidebar-item">
+          <button mat-icon-button [ngClass]="{'active': activeIcon === 'settings'}" (click)="setActive('settings')">
+            <mat-icon inline="true" style="color: white">settings</mat-icon>
+          </button>
+        </div>
+        <div class="sidebar-item">
+          <button mat-icon-button [ngClass]="{'active': activeIcon === 'notifications'}" (click)="setActive('notifications')">
+            <mat-icon inline="true" style="color: white">notifications</mat-icon>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Bottom icon -->
+      <div class="sidebar-item">
+        <button mat-icon-button [ngClass]="{'active': activeIcon === 'exit_to_app'}" (click)="setActive('exit_to_app')">
+          <mat-icon inline="true" style="color: white">exit_to_app</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  
