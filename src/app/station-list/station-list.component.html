@@ -1,0 +1,13 @@
+<div class="station-list-container">
+    <app-station-card 
+      *ngFor="let station of stations"
+      [stationName]="station.stationName"
+      [totalSales]="station.totalSales"
+      [totalValue]="station.totalValue"
+      [compressionState]="station.compressionState"
+      [transactionCount]="station.transactionCount"
+      [maxTransactionHour]="station.maxTransactionHour"
+      [maxTransactionDateTime]="station.maxTransactionDateTime"
+    ></app-station-card>
+  </div>
+  

@@ -1,0 +1,66 @@
+.station-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 16px;
+    background-color: white;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  .station-header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #6c757d;
+  }
+  
+  .station-header mat-icon {
+    color: #ffa726;
+    margin-right: 8px;
+  }
+  
+  .station-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .station-details div {
+    flex: 1 1 50%;
+    color: #333;
+  }
+  .station-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px; /* Adjust space between items as needed */
+  }
+  .station-details {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of the info groups */
+    gap: 20px; /* Optional: space between the groups */
+    width: 100%; /* Ensures the container takes up 100% of the available width */
+  }
+  
+  .info-group {
+    display: flex;
+    justify-content: space-between; /* Ensures that items are spread across the full width */
+    gap: 16px; /* Optional: space between the items inside each group */
+    width: 100%; /* Ensures each group takes up the full width */
+  }
+  
+  .info-item {
+    flex: 1 1 30%; /* Ensures each info-item takes up roughly 30% of the group's width */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .title {
+    font-weight: bold;
+    margin-right: 8px; /* Adds space between the title and the value */
+  }
+  
+  
+  
