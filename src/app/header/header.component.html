@@ -1,0 +1,48 @@
+<div class="header">
+    <div class="monitoring-info">
+      <mat-icon>local_gas_station</mat-icon>
+      <span>2/3 Monitored Stations</span>
+      <mat-icon>update</mat-icon>
+      <span>20s Last Update</span>
+    </div>
+  
+    <mat-button-toggle-group
+    name="timeRange"
+    aria-label="Time Range"
+    [(ngModel)]="selectedTimeRange"
+    style="border-radius: 43px"
+  >
+    <mat-button-toggle
+      value="today"
+      [ngClass]="{ 'active-button': selectedTimeRange === 'today' }"
+      >Today</mat-button-toggle
+    >
+    <mat-button-toggle
+      value="yesterday"
+      [ngClass]="{ 'active-button': selectedTimeRange === 'yesterday' }"
+      >Yesterday</mat-button-toggle
+    >
+    <mat-button-toggle
+      value="last-week"
+      [ngClass]="{ 'active-button': selectedTimeRange === 'last-week' }"
+      >Last Week</mat-button-toggle
+    >
+  </mat-button-toggle-group>
+  
+    <div class="date-selector">
+      <mat-form-field class="input-container">
+        <mat-icon matPrefix>play_arrow</mat-icon>
+        <input matInput placeholder="Start date-time" [matDatepicker]="picker1" />
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-form-field class="input-container">
+        <mat-icon matPrefix>stop</mat-icon>
+        <input matInput placeholder="End date-time" [matDatepicker]="picker2" />
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+  

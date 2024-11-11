@@ -1,0 +1,167 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: white; // Adjust background color as needed
+    ::ng-deep .mat-button-toggle-checked {
+        background-color: #F27D59 !important;
+        color: white; /* Adjust text color if needed */
+      }
+      .input-container {
+        display: flex;
+        align-items: center;
+        background-color: white;
+      }
+      
+      .mat-icon {
+        margin-right: 8px; /* Adjust the space between icon and input */
+      }
+      .date-selector {
+        display: flex;
+        gap: 16px;  /* Adds space between the date pickers */
+      }
+      
+      .input-container {
+        flex: 1;
+      }
+      
+    .monitoring-info {
+        .fa-solid.fa-building {
+            color: orange;
+            font-size: 20px;
+            margin-right: 8px;
+        }
+    }
+
+    .date-selector {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        button {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #faf5f2;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;  
+
+
+            &:hover {
+                background-color:  
+ #f0f0f0;
+            }
+
+            // Add icon to buttons
+            &.today-button {
+                // Replace 'icon-today' with the actual icon class or font name
+                &::before {
+                    content: '\f073'; // Example using Font Awesome icon
+                    font-family: 'Font Awesome';
+                    margin-right: 8px;
+                }
+            }
+
+            &.yesterday-button {
+                // Replace 'icon-yesterday' with the actual icon class or font name
+                &::before {
+                    content: '\f017'; // Example using Font Awesome icon
+                    font-family: 'Font Awesome';
+                    margin-right: 8px;
+                }
+            }
+
+            &.last-week-button {
+                // Replace 'icon-last-week' with the actual icon class or font name
+                &::before {
+                    content: '\f019'; // Example using Font Awesome icon
+                    font-family: 'Font Awesome';
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        mat-form-field {
+            width: fit-content; // Adjust width as needed
+            margin-right: 16px;
+
+            input {
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+::ng-deep .mat-button-toggle-group .mat-button-toggle-checked .mat-button-toggle-label {
+    display: none; /* Hide the selection indicator */
+  }
+  ::ng-deep .mat-button-toggle-group .mat-button-toggle-checked {
+    background-color: transparent !important; /* Remove background color on selection */
+  }
+  ::ng-deep .mat-button-toggle .mat-pseudo-checkbox {
+    display: none !important;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: white;
+  
+    .monitoring-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+  
+      mat-icon {
+        color: #f27d59;
+        font-size: 20px;
+      }
+  
+      span {
+        font-size: 14px;
+        color: #333;
+      }
+    }
+  
+    .time-toggle {
+      display: flex;
+      .toggle-button {
+        border-radius: 20px;
+        padding: 8px 16px;
+        font-weight: bold;
+        &.mat-button-toggle-checked {
+          background-color: #f27d59;
+          color: white;
+        }
+      }
+    }
+  
+    .date-selector {
+      display: flex;
+      gap: 16px;
+  
+      .input-container {
+        display: flex;
+        align-items: center;
+        background-color: white;
+  
+        mat-icon {
+          color: #f27d59;
+          margin-right: 8px;
+        }
+  
+        input {
+          padding: 8px;
+          border: none;
+        }
+      }
+    }
+  }
+  
+  
+  
