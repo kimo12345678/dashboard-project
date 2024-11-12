@@ -8,11 +8,12 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { CommonModule } from '@angular/common';
 import { GraphComponent } from '../graph/graph.component';
 import { MatIcon } from '@angular/material/icon';
+import { SalesStationDashboardComponent } from '../sales-station-dashboard/sales-station-dashboard.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [SummaryCardComponent, StationListComponent, BaseChartDirective,FormsModule,MatButtonToggleModule,CommonModule,GraphComponent,MatIcon],
+  imports: [SummaryCardComponent, StationListComponent, BaseChartDirective,FormsModule,MatButtonToggleModule,CommonModule,GraphComponent,MatIcon,SalesStationDashboardComponent],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'] // Corrected from `styleUrl` to `styleUrls`
 })
