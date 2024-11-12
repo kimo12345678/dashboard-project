@@ -1,1 +1,12 @@
-<p>graph works!</p>
+<div class="graph-container">
+    <div class="tabs">
+        <button *ngFor="let tab of tabs" 
+                (click)="selectTab(tab)" 
+                [class.active]="selectedTab === tab">
+          {{ tab }}
+        </button>
+      </div>
+    
+    <canvas  id="barChart"></canvas>
+  </div>
+  

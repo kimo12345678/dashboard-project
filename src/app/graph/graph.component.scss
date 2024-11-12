@@ -1,0 +1,56 @@
+.graph-container {
+    background-color: #f7f8fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .graph-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .view-toggle button.active {
+    background-color: #f37220;
+    color: white;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: end;
+
+  }
+  
+  .tabs span.active {
+    border-bottom: 1px solid #f37220;
+    font-weight: bold;
+    text-decoration: underline;
+        text-decoration-color: #f37220; /* Orange underline */
+  }
+  
+  canvas {
+    max-width: 100%;
+  }
+  .tabs {
+    display: flex;
+ 
+
+  }
+  
+  button {
+    font-style: italic;
+    transform: translatey(10px);
+    background:transparent;
+    border: 0px solid #ddd;
+    cursor: pointer;
+  }
+  
+  button.active {
+    background: transparent;
+    color: #f37220;
+    border: 0px solid #f37220;
+    text-decoration: underline;
+    text-decoration-color: #f37220; /* Orange underline */
+  }
+  
+  
