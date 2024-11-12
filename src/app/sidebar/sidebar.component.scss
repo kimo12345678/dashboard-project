@@ -55,7 +55,7 @@
       }
       /* Optional: Style for the active state */
 button.active mat-icon {
-    color: #f39c12; /* Change to your desired active color */
+    /* Change to your desired active color */
   }
   
   button {
@@ -72,6 +72,17 @@ button.active mat-icon {
     justify-content: center;
     align-items: center;
   }
-  
+  /* Active button style */
+button.active {
+  color: aliceblue;
+ /* Add background or other styles as needed */
+}
+
+/* Inactive button style */
+button.inactive {
+  color: lightgray;
+  background-color: transparent; /* Make the background transparent or use any other style */
+}
+
   }
   

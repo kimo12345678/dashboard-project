@@ -10,31 +10,42 @@
       <!-- Grouped middle icons -->
       <div class="sidebar-middle">
         <div class="sidebar-item">
-          <button mat-icon-button [ngClass]="{'active': activeIcon === 'speed'}" (click)="setActive('speed')">
-            <mat-icon inline="true" style="color: white">speed</mat-icon>
+          <button mat-icon-button 
+                  [ngClass]="{'active': activeIcon === 'speed', 'inactive': activeIcon !== 'speed'}" 
+                  (click)="setActive('speed')">
+            <mat-icon inline="true">speed</mat-icon>
           </button>
         </div>
         <div class="sidebar-item">
-          <button mat-icon-button [ngClass]="{'active': activeIcon === 'dashboard'}" (click)="setActive('dashboard')">
-            <mat-icon inline="true" style="color: white">dashboard</mat-icon>
+          <button mat-icon-button 
+                  [ngClass]="{'active': activeIcon === 'dashboard', 'inactive': activeIcon !== 'dashboard'}" 
+                  (click)="setActive('dashboard')">
+            <mat-icon inline="true">dashboard</mat-icon>
           </button>
         </div>
         <div class="sidebar-item">
-          <button mat-icon-button [ngClass]="{'active': activeIcon === 'layers'}" (click)="setActive('layers')">
-            <mat-icon inline="true" style="color: white">layers</mat-icon>
+          <button mat-icon-button 
+                  [ngClass]="{'active': activeIcon === 'layers', 'inactive': activeIcon !== 'layers'}" 
+                  (click)="setActive('layers')">
+            <mat-icon inline="true">layers</mat-icon>
           </button>
         </div>
         <div class="sidebar-item">
-          <button mat-icon-button [ngClass]="{'active': activeIcon === 'settings'}" (click)="setActive('settings')">
-            <mat-icon inline="true" style="color: white">settings</mat-icon>
+          <button mat-icon-button 
+                  [ngClass]="{'active': activeIcon === 'settings', 'inactive': activeIcon !== 'settings'}" 
+                  (click)="setActive('settings')">
+            <mat-icon inline="true">settings</mat-icon>
           </button>
         </div>
         <div class="sidebar-item">
-          <button mat-icon-button [ngClass]="{'active': activeIcon === 'notifications'}" (click)="setActive('notifications')">
-            <mat-icon inline="true" style="color: white">notifications</mat-icon>
+          <button mat-icon-button 
+                  [ngClass]="{'active': activeIcon === 'notifications', 'inactive': activeIcon !== 'notifications'}" 
+                  (click)="setActive('notifications')">
+            <mat-icon inline="true">notifications</mat-icon>
           </button>
         </div>
       </div>
+      
       
       <!-- Bottom icon -->
       <div class="sidebar-item">

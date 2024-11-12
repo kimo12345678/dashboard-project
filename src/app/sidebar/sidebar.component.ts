@@ -10,12 +10,11 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  activeIcon: string = ''; // Default to no icon being active
+  activeIcon: string = 'speed';  // Default active icon// Default to no icon being active
 
   // Method to set the active icon
   setActive(icon: string) {
-    // If the clicked icon is already active, deactivate it
-    this.activeIcon = this.activeIcon === icon ? '' : icon;
+    this.activeIcon = icon;  // Set the clicked icon as active
   }
 }
 
