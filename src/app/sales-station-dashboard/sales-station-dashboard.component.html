@@ -1,22 +1,26 @@
 <div class="dashboard">
-    <div class="hourly-sales">
-      <h2>Hourly Sales</h2>
-      <canvas id="radarChart"></canvas>
-    </div>
-  
-    <div class="sales-by-station">
-      <h3>Sales by Station</h3>
-      <div class="station" *ngFor="let station of stations">
-        <div class="station-info">
-            <mat-icon class="station-icon">local_gas_station</mat-icon>
+  <div class="hourly-sales">
+    <h2>Hourly Sales</h2>
+    <canvas id="radarChart"></canvas>
+  </div>
 
-          <span class="station-name">{{ station.name }}</span>
-          <span class="station-sales">{{ station.sales | number }}m³</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress" [style.width.%]="station.progress"></div>
-        </div>
+  <div class="sales-by-station">
+    <h3>Sales by Station</h3>
+    <div class="station" *ngFor="let station of stations">
+      <div class="station-info">
+        <mat-icon class="station-icon">local_gas_station</mat-icon>
+
+        <span class="station-name">{{ station.name }}</span>
+        <span class="station-sales">
+          <ng-container *ngIf="isNumber(station.sales); else notAvailable">
+            {{ station.sales | number }} m³
+          </ng-container>
+          <ng-template #notAvailable>{{ station.sales }}</ng-template>
+        </span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" [style.width.%]="station.progress"></div>
       </div>
     </div>
   </div>
-  
+</div>
